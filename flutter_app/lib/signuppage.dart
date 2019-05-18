@@ -39,7 +39,6 @@ class _SignupPageState extends State<SignupPage> {
                   }
               ),
               SizedBox(height: 20.0,),
-
               SizedBox(height: 10.0),
               RaisedButton(
                 child: Text('Sign Up'),
@@ -52,11 +51,11 @@ class _SignupPageState extends State<SignupPage> {
                       password: _password
                   ).then((signedInUser){
                     UserManagement().storeNewUser(signedInUser, context);
+                    Navigator.of(context).pushReplacementNamed('/homepage');
                   })
                       .catchError((e){
                     print(e);
                   });
-
                 },
               )
             ],

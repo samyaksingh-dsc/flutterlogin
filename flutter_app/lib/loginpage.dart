@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                       email: _email,
                       password: _password
                   ).then((FirebaseUser user) {
-                    Navigator.of(context).pushReplacementNamed('homepage');
+                    Navigator.of(context).pushReplacementNamed('/homepage');
                   } )
                       .catchError((e){
                     print(e);
