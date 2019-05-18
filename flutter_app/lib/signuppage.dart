@@ -13,7 +13,8 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+        resizeToAvoidBottomPadding: false,
+        body: Center(
         child: Container(
           padding: EdgeInsets.all(25.0),
           child: Column(
